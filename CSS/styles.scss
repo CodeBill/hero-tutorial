@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@700&family=Kreon:wght@600&display=swap');//Variables
+
+//Variables
+$nav-color: #E7DFC6;
+$btn-color: #fcd78a;
+$logo-color: #FF7E47;
+
+//Mixins
+@mixin buttons{
+			font-family: 'Kreon', serif;
+			font-size: .9rem;
+			color: #000;
+			padding: 5px 10px;
+			white-space: nowrap;
+			margin: 10px 10px;
+			border: none;
+			background-color: $btn-color;
+			border-radius: 5px ;
+			transition: background-color ease .4s;
+			&:hover{
+				cursor: pointer;
+				background-color: #ca8b51;
+			}
+}
+
+@mixin logo{
+			font-family: 'Dancing Script', cursive;
+			font-size: 40px;
+			margin: auto 20px;
+			&:hover{
+				cursor: pointer;
+			}
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+.hero{
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../IMGS/bg-pic.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+
+	.navbar{
+	width: 90%;
+	height: 60px;
+	display: flex;
+	margin: 10px auto;
+	justify-content: flex-start;
+
+		.logo{
+			@include logo;
+			color: $logo-color;
+		}
+
+		.nav-links{
+			display: flex;
+			margin: auto 0;
+			margin-right: auto;
+		}
+
+		li{
+			list-style: none;
+			margin: 0 12px;
+			&:hover{
+				
+			}
+		}
+
+		a{
+			font-family: 'Kreon', serif;
+			font-size: 1.2rem;
+			color: #fff;
+			text-decoration: none;
+			white-space: nowrap;
+			transition: text-decoration ease .4s;
+			&:hover{
+				text-decoration: underline;
+				
+			}
+
+		}
+
+		.btn-cont{
+			margin: 2px 20px;
+			align-items: center;
+			display: flex;
+
+		}
+
+		.btn{
+			@include buttons;
+		}
+
+		.burgr{
+			cursor: pointer;
+			padding-top: 5px;
+			margin: auto 0;
+			margin-left: auto;
+			display: none;
+			.line{
+				width: 25px;
+				height: 6px;
+				background: $btn-color;
+				margin: 3.5px 0;
+			}
+		}
+
+	}
+
+	.hero-content{
+		margin: 200px 200px;
+		
+		p{
+			font-family: 'Josefin Sans', sans-serif; 
+			font-size: 50px;
+			margin-top: 20px;
+			color: white;
+			text-align: left;
+			line-height: 60px;
+
+			.chs{
+				color: $btn-color;
+			}			
+		}
+
+		button{
+			@include buttons;
+		}
+	}
+}
+
+
+.sidebar{
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	z-index: 2;
+	right: -300px;
+	top: 0;
+	background-color: $btn-color;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	transition: right ease .4s;
+	
+	.side-cont{
+		margin: 25px;
+
+		.lni-close{
+			margin-right: auto;
+			margin-bottom: 20px;
+			padding: 5px;
+			border-radius: 5px;
+			color: $logo-color;
+			font-size: 30px;
+			transition: background-color ease .4s, color ease .4s;
+			&:hover{
+				cursor: pointer;
+				background-color: #ca8b51;
+				color: #fff;
+
+			}
+			
+		}
+
+		.upper{
+			display: flex;
+			margin-bottom: 50px;
+
+			.logo{
+				@include logo;
+				margin-right: auto;
+			}
+
+			button{
+				font-family: 'Kreon', serif;
+				font-size: .9rem;
+				color: #000;
+				padding: 10px 20px;
+				margin: 10px 10px;
+				border: none;
+				background-color: #ca8b51;
+				border-radius: 5px ;
+				transition: background-color ease .4s;
+
+				&:hover{
+				background-color: $logo-color;
+				cursor: pointer;
+				}
+			}	
+
+		}
+
+		.links{
+			margin: auto;
+			display: flex;
+			justify-content: center;
+
+			.sidelinks{
+				li{
+					list-style: none;
+					margin-bottom: 20px;
+					padding: 10px 20px;
+					transition: background-color ease .4s, color ease .4s;
+					&:hover{
+						background-color: #ca8b51;
+						border-radius: 5px;
+						a{
+							color: #fff;
+						}
+					}
+				
+
+					a{
+						text-decoration: none;
+						color: $logo-color;
+						font-size: 30px;
+						font-family: 'Kreon', serif;
+						white-space: nowrap;
+
+					}	
+
+						.lni{
+							margin-right: 20px;
+						}
+					
+				}	
+			}
+		}
+	}
+
+
+
+
+}
+
+@media (max-width: 816px){
+	
+	.hero{
+		.navbar{
+			.nav-links, .btn-cont{
+				display: none;
+			}
+
+			.burgr{
+				display: block;
+			}
+		}
+		.hero-content{
+			margin: 150px auto;
+			display: flex;
+			flex-direction: column;
+			align-items:center;
+			p{
+				text-align: center;
+				line-height: 70px;
+			}
+			button{
+				padding: 20px 30px;
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+
+	
+
+}
+

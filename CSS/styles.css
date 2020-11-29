@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@700&family=Kreon:wght@600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../IMGS/bg-pic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+.hero .navbar {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  margin: 10px auto;
+  justify-content: flex-start;
+}
+.hero .navbar .logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  margin: auto 20px;
+  color: #FF7E47;
+}
+.hero .navbar .logo:hover {
+  cursor: pointer;
+}
+.hero .navbar .nav-links {
+  display: flex;
+  margin: auto 0;
+  margin-right: auto;
+}
+.hero .navbar li {
+  list-style: none;
+  margin: 0 12px;
+}
+.hero .navbar a {
+  font-family: "Kreon", serif;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: text-decoration ease 0.4s;
+}
+.hero .navbar a:hover {
+  text-decoration: underline;
+}
+.hero .navbar .btn-cont {
+  margin: 2px 20px;
+  align-items: center;
+  display: flex;
+}
+.hero .navbar .btn {
+  font-family: "Kreon", serif;
+  font-size: 0.9rem;
+  color: #000;
+  padding: 5px 10px;
+  white-space: nowrap;
+  margin: 10px 10px;
+  border: none;
+  background-color: #fcd78a;
+  border-radius: 5px;
+  transition: background-color ease 0.4s;
+}
+.hero .navbar .btn:hover {
+  cursor: pointer;
+  background-color: #ca8b51;
+}
+.hero .navbar .burgr {
+  cursor: pointer;
+  padding-top: 5px;
+  margin: auto 0;
+  margin-left: auto;
+  display: none;
+}
+.hero .navbar .burgr .line {
+  width: 25px;
+  height: 6px;
+  background: #fcd78a;
+  margin: 3.5px 0;
+}
+.hero .hero-content {
+  margin: 200px 200px;
+}
+.hero .hero-content p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 50px;
+  margin-top: 20px;
+  color: white;
+  text-align: left;
+  line-height: 60px;
+}
+.hero .hero-content p .chs {
+  color: #fcd78a;
+}
+.hero .hero-content button {
+  font-family: "Kreon", serif;
+  font-size: 0.9rem;
+  color: #000;
+  padding: 5px 10px;
+  white-space: nowrap;
+  margin: 10px 10px;
+  border: none;
+  background-color: #fcd78a;
+  border-radius: 5px;
+  transition: background-color ease 0.4s;
+}
+.hero .hero-content button:hover {
+  cursor: pointer;
+  background-color: #ca8b51;
+}
+
+.sidebar {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  right: -300px;
+  top: 0;
+  background-color: #fcd78a;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: right ease 0.4s;
+}
+.sidebar .side-cont {
+  margin: 25px;
+}
+.sidebar .side-cont .lni-close {
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #FF7E47;
+  font-size: 30px;
+  transition: background-color ease 0.4s, color ease 0.4s;
+}
+.sidebar .side-cont .lni-close:hover {
+  cursor: pointer;
+  background-color: #ca8b51;
+  color: #fff;
+}
+.sidebar .side-cont .upper {
+  display: flex;
+  margin-bottom: 50px;
+}
+.sidebar .side-cont .upper .logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  margin: auto 20px;
+  margin-right: auto;
+}
+.sidebar .side-cont .upper .logo:hover {
+  cursor: pointer;
+}
+.sidebar .side-cont .upper button {
+  font-family: "Kreon", serif;
+  font-size: 0.9rem;
+  color: #000;
+  padding: 10px 20px;
+  margin: 10px 10px;
+  border: none;
+  background-color: #ca8b51;
+  border-radius: 5px;
+  transition: background-color ease 0.4s;
+}
+.sidebar .side-cont .upper button:hover {
+  background-color: #FF7E47;
+  cursor: pointer;
+}
+.sidebar .side-cont .links {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.sidebar .side-cont .links .sidelinks li {
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  transition: background-color ease 0.4s, color ease 0.4s;
+}
+.sidebar .side-cont .links .sidelinks li:hover {
+  background-color: #ca8b51;
+  border-radius: 5px;
+}
+.sidebar .side-cont .links .sidelinks li:hover a {
+  color: #fff;
+}
+.sidebar .side-cont .links .sidelinks li a {
+  text-decoration: none;
+  color: #FF7E47;
+  font-size: 30px;
+  font-family: "Kreon", serif;
+  white-space: nowrap;
+}
+.sidebar .side-cont .links .sidelinks li .lni {
+  margin-right: 20px;
+}
+
+@media (max-width: 816px) {
+  .hero .navbar .nav-links, .hero .navbar .btn-cont {
+    display: none;
+  }
+  .hero .navbar .burgr {
+    display: block;
+  }
+  .hero .hero-content {
+    margin: 150px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero .hero-content p {
+    text-align: center;
+    line-height: 70px;
+  }
+  .hero .hero-content button {
+    padding: 20px 30px;
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
