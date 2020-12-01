@@ -1,0 +1,18 @@
+link: <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+
+
+---ICONS---
+<i class="lni lni-close"></i>
+<i class="lni lni-home"></i>
+<i class="lni lni-sprout"></i>
+<i class="lni lni-wallet"></i>
+<i class="lni lni-offer"></i>
+<i class="lni lni-direction"></i>
+<i class="lni lni-laptop-phone"></i>
+
+
+---SASS---
+sass --watch styles.scss:styles.css
+
+---Fonts---
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@700&family=Kreon:wght@600&display=swap');
